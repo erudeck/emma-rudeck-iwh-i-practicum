@@ -1,0 +1,19 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Holidays Table
+        a(href="/update-cobj") Add to this table
+        table 
+            tr
+                th Name 
+                th Location 
+                th Duration
+            each object in data
+                tr 
+                    td #{object.properties.name}
+                    td #{object.properties.location}
+                    td #{object.properties.duration}
